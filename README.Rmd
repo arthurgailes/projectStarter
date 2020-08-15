@@ -1,0 +1,40 @@
+---
+title: "README"
+author: "Arthur Gailes"
+date: "1/27/2020"
+output: github_document
+---
+
+# Default Data Science Project Directory
+
+The folders in this project are:
+
+* _data_ - all the data you have collected or been \
+given to analyze.
+  + _raw_ - data from external sources, not to be edited.
+  + _tidy_ - organized, munged, prunded, and/or joined data for analysis
+  + _final_ - final data output, but only that which is not publicized
+* _analysis_ - tests, internal reports, exploratory analysis and graphs. 
+  + _figures_ - graphs, charts, html produced in other reports
+  + _reports_ - data from external sources, not to be edited.
+  + _data_ - publicized datasets (.csv, .xlsx, etc)
+* _code_ - create code files for collecting, cleaning up, or analy\
+zing data.
+* _documentation_ - written explanation of package and sources
+  + _R_ - for example, R code would go here.
+* _products_ - this is the place where you will plac
+  + _figures_ - graphs, charts, html produced in other reports
+  + _reports_ - written reports (.docx, .pdf, etc)
+  + _data_ - publicized datasets (.csv, .xlsx, etc)
+* _README_ - project root documentation
+* _.gitignore_ - instructions for git to ignore files. By default set to ignore data/tidy, data/final, analysis/* and products/*.
+
+Obviously all folder structure is flexible; this is only a starting point to make sure our analyses orbit around a different structure.
+
+Note: all .gitkeep files can be deleted; they're only here so the folders will show up.
+
+Based on:
+
+* https://github.com/arthurgailes/project-directory
+* https://nicercode.github.io/blog/2013-04-05-projects/
+* https://drivendata.github.io/cookiecutter-data-science/#directory-structure

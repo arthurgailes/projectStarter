@@ -1,0 +1,9 @@
+# exclusions
+data/tidy/*
+data/raw/*
+products/*
+desktop.ini
+.Rhistory
+
+# necessary to keep the folder itself
+!.gitkeep 
