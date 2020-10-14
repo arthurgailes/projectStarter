@@ -1,9 +1,7 @@
 # exclusions
-data/tidy/*
-data/raw/*
-products/*
 desktop.ini
 .Rhistory
+.Rbuildignore
 
 # necessary to keep the folder itself
 !.gitkeep 
