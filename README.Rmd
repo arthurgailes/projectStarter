@@ -1,7 +1,7 @@
 ---
 title: "README"
 author: "Arthur Gailes"
-date: "1/27/2020"
+date: "10/14/2020"
 output: github_document
 ---
 
@@ -9,32 +9,36 @@ output: github_document
 
 The folders in this project are:
 
-* _data_ - all the data you have collected or been \
-given to analyze.
+* _data_ - all the data you have collected or been given to analyze.
   + _raw_ - data from external sources, not to be edited.
-  + _tidy_ - organized, munged, prunded, and/or joined data for analysis
-  + _final_ - final data output, but only that which is not publicized
-* _analysis_ - tests, internal reports, exploratory analysis and graphs. 
-  + _figures_ - graphs, charts, html produced in other reports
-  + _reports_ - data from external sources, not to be edited.
-  + _data_ - publicized datasets (.csv, .xlsx, etc)
-* _code_ - create code files for collecting, cleaning up, or analy\
-zing data.
-* _documentation_ - written explanation of package and sources
-  + _R_ - for example, R code would go here.
-* _products_ - this is the place where you will plac
-  + _figures_ - graphs, charts, html produced in other reports
+  + _tidy_ - organized, munged, prunded, and/or joined data for analysis. I usually add this to .gitignore, since it should all be reproducable by the package code.
+* _analysis_ - scripts for tests, internal reports, exploratory analysis and graphs. Naming convention is a number (for ordering), the creator's initials, and a short "-" delimited description, e.g. "1.0-jqp-initial-data-exploration". 
+* _references_ - data dictionaries, manuals, and all other explanatory materials.
+* _products_ - Anything that is published or distributed
+  + _figures_ - publicized graphs, charts, etc
   + _reports_ - written reports (.docx, .pdf, etc)
   + _data_ - publicized datasets (.csv, .xlsx, etc)
 * _README_ - project root documentation
 * _.gitignore_ - instructions for git to ignore files. By default set to ignore data/tidy, data/final, analysis/* and products/*.
+* _R_ - R package functions, if necessary (see below)
+* _src_ - python scripts and functions
 
 Obviously all folder structure is flexible; this is only a starting point to make sure our analyses orbit around a different structure.
+
+To set up an R project directory, run this code in README.Rmd or in the console (making sure you don't overwrite)
+```{r}
+library(here)
+knitr::opts_knit$set(root.dir = here)
+folder_names <- c("data","data/raw", "data/tidy","documentation", 
+  "analysis","analysis/reports","analysis/data","analysis/figures", 
+  "products","products/reports","products/data","products/figures")
+sapply(folder_names, dir.create)
+```
 
 Note: all .gitkeep files can be deleted; they're only here so the folders will show up.
 
 Based on:
 
-* https://github.com/arthurgailes/project-directory
+* https://peerj.com/preprints/3192.pdf
 * https://nicercode.github.io/blog/2013-04-05-projects/
 * https://drivendata.github.io/cookiecutter-data-science/#directory-structure
