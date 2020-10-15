@@ -25,14 +25,11 @@ The folders in this project are:
 
 Obviously all folder structure is flexible; this is only a starting point to make sure our analyses orbit around a different structure.
 
-To set up an R project directory, run this code in README.Rmd or in the console (making sure you don't overwrite)
-```{r}
+To set up an R package directory, run this code in README.Rmd or in the console (making sure you're in the correct directory)
+```{r eval=FALSE}
 library(here)
-knitr::opts_knit$set(root.dir = here)
-folder_names <- c("data","data/raw", "data/tidy","documentation", 
-  "analysis","analysis/reports","analysis/data","analysis/figures", 
-  "products","products/reports","products/data","products/figures")
-sapply(folder_names, dir.create)
+knitr::opts_knit$set(root.dir = here())
+# usethis::create_tidy_package(path=getwd(), "your_package_name")
 ```
 
 Note: all .gitkeep files can be deleted; they're only here so the folders will show up.
