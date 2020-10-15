@@ -23,8 +23,7 @@ The folders in this project are:
       - *reports* - written reports (.docx, .pdf, etc)
       - *data* - publicized datasets (.csv, .xlsx, etc)
   - *README* - project root documentation
-  - *.gitignore* - instructions for git to ignore files. By default set
-    to ignore data/tidy, data/final, analysis/\* and products/\*.
+  - *.gitignore* - instructions for git to ignore files.
   - *R* - R package functions, if necessary (see below)
   - *src* - python scripts and functions
 
